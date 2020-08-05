@@ -33,12 +33,12 @@ function eventColor () {
 }
 
 function myStorage() {
-    //creating an var element local storage for every hours input
+    //creating var called element local storage for every hours input
     for (let i = 0; i < localStorage.length; i++) {
         const element = localStorage.key(i);
         //console.log(element);
-        //parse the element storage in JSON
         if(element){
+            //basically parse that input as element and assign it the that id 
             $('#' + element).val(JSON.parse(localStorage.getItem(element)));
         }
     }
